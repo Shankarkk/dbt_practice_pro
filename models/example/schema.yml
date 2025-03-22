@@ -1,21 +1,12 @@
 
 version: 2
+sources:
+  - name: raw_data
+    database: "{{('practice_dbt')}}"
+    schema: raw_table
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_PAYMENTS
+      - name: RAW_ORDERS
+     
