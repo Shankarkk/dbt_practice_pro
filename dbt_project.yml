@@ -41,7 +41,7 @@ models:
     example:
       +materialized: table
 
-    stg_data:
+    staging:
       +materialized: table
 
       
