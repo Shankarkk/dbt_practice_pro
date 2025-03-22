@@ -41,4 +41,7 @@ models:
     example:
       +materialized: table
 
+    stg_data:
+      +materialized: table
+
       
