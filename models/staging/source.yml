@@ -8,3 +8,4 @@ sources:
       - name: RAW_CUSTOMERS
       - name: RAW_PAYMENTS
       - name: RAW_ORDERS
+      - name: SSCUSTOMERS
