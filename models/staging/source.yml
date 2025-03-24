@@ -1,0 +1,20 @@
+version: 2
+sources:
+    - name: datafeed_shared_schema
+      database: "{{('practice_dbt')}}"
+      schema: raw_table
+      tables:
+        - name: RAW_CUSTOMERS
+        - name: RAW_PAYMENTS
+        - name: RAW_ORDERS
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+            - name: status
+              tests:
+                - accepted_values:
+                      values: ['placed','shipped','completed','returned','return_pending','order',deleivered','transit','in transit']
+        - name: SSCUSTOMERS
+        
