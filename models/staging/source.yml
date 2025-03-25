@@ -17,4 +17,6 @@ sources:
                 - accepted_values:
                       values: ['placed','shipped','completed','returned','return_pending','order',deleivered','transit','in transit']
         - name: SSCUSTOMERS
+        - name: EMPLOYEES
+        
         
