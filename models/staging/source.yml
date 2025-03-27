@@ -15,7 +15,7 @@ sources:
             - name: status
               tests:
                 - accepted_values:
-                      values: ['placed','shipped','completed','returned','return_pending','order',deleivered','transit','in transit']
+                      values: ['placed','shipped','completed','returned','return_pending','Order','delivered','transit']
         - name: SSCUSTOMERS
         - name: EMPLOYEES
         - name: RAW_PRODUCT
