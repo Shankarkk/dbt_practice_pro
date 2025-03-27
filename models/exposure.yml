@@ -1,0 +1,30 @@
+version: 2
+exposures:
+  - name: weekly_metrics
+    label: shankar by the Week
+    type: dashboard
+    maturity: high
+    description: 
+     For more exposure about project details
+
+    depends_on:
+      - ref('customers')
+      - ref('payments')
+      - ref('orders')
+      - ref('emp_customer')
+      - ref('final_file')
+      - ref('pre_post_model')
+      - ref('employees_salary')
+      - ref('og_compare_table_rowcount')
+      - ref('order_append')
+      - ref('order_delete_insert')
+      - ref('order_merge')
+      - ref('orderse')
+      - source('datafeed_shared_schema','RAW_ORDERS')
+      - source('datafeed_shared_schema','RAW_CUSTOMERS')
+      - source('datafeed_shared_schema','RAW_PAYMENTS')
+  
+    owner:
+      name:  shankar
+      email: mailbox869115@gmail.com
+
