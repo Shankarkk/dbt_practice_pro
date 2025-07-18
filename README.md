@@ -1,52 +1,79 @@
-# dbt_practice_pro
+# 🛒 **E-Commerce Customer Analytics** (`dbt_practice_pro`)
 
-🚀 Hands-on dbt Project - 45 Days Training Practice
-
-This repository contains structured dbt model development as part of a 45-day data engineering training program. The project is designed to simulate real-world dbt workflows including staging, intermediate transformations, and mart layer reporting.
+A complete **end-to-end analytics project** for an e-commerce platform, designed using **Snowflake**, **dbt Cloud**, and **CI/CD**, with structured ELT layers and tested business metrics ready for dashboards and stakeholder reports.
 
 ---
 
-## 🧩 Project Structure
+## 🔧 **Tech Stack**
 
-├── dbt_project.yml ├── models │   ├── staging │   │   └── stg_orders.sql │   ├── intermediate │   │   └── int_customer_orders.sql │   └── marts │       └── core │           └── customer_order_summary.sql
-
----
-
-## 📌 Key Features
-
-- ✅ dbt model structure with `staging → intermediate → marts`
-- ✅ Jinja macros and source references
-- ✅ Incremental model usage (where practiced)
-- ✅ YML-based schema documentation and testing
-- ✅ dbt Cloud connection with Snowflake
-- ✅ GitHub integration and version control setup
+- **Snowflake** – Centralized data warehouse (Staging → Intermediate → Mart architecture)  
+- **dbt Cloud** – ELT modeling with documentation, incremental models, and tests  
+- **GitHub** – CI/CD versioning and deployment (future-ready)  
+- **SQL, Jinja, dbt tests, Source freshness**
 
 ---
 
-## 🛠️ Tech Stack
+## 🧩 **Key Features**
 
-- **dbt Core**
-- **Snowflake** (as Data Warehouse)
-- **GitHub** (version control)
-- **dbt Cloud** (for scheduling & CI)
-
----
-
-## 📚 Learnings & Outcomes
-
-- Understood dbt folder hierarchy and model development
-- Practiced `ref()` and `source()` functions
-- Applied schema testing and documentation best practices
-- Simulated real-world development-to-deployment pipeline
-- Debugged model failures and ensured valid outputs manually
+- 🧼 Cleanly separates raw, logic, and reporting layers  
+- 🧪 Implements **dbt tests** (`not_null`, `unique`, `relationships`) for trustable data  
+- 📦 Tracks **RFM (Recency, Frequency, Monetary) scores**, active users, and product trends  
+- 📊 Final models are **dashboard-ready** for executive reporting  
+- 🔁 Incremental models and freshness checks included
 
 ---
 
-## 📎 Related Projects
+## 📁 **Project Structure**
 
--[`mortgage-psdt`](https://github.com/Shankarkk/mortgage-psdt) – Real-world post-sanction documentation tracker
--[`E-commerce_analytics_project`](https://github.com/Shankarkk/E-commerce_analytics_project) – End-to-end Snowflake + dbt e-commerce pipeline
+```bash
+dbt_practice_pro/
+├── models/
+│   ├── staging/             # Raw source cleanup (e.g., stg_customers, stg_orders)
+│   ├── intermediate/        # Business rules, derived metrics (e.g., customer_rfm)
+│   └── marts/               # Final facts & dimensions for reporting (e.g., customer_mart)
+├── tests/                   # dbt schema + relationship tests
+├── macros/                  # Reusable Jinja functions (optional)
+├── snapshots/               # Slowly changing dimensions (if needed)
+├── dbt_project.yml          # Project config
+├── packages.yml             # dbt packages (if used)
+└── README.md                # Documentation (this file)
+
 
 ---
 
-📌 *This project served as a stepping stone to confidently build and execute production-grade dbt projects.*
+📊 Business Use Cases
+
+📈 Identify and rank loyal customers using RFM scoring
+
+🛍 Track monthly order trends, product-level performance
+
+🔁 Compare active vs inactive users across time periods
+
+📦 Analyze category-wise sales, returns, and customer engagement
+
+
+
+---
+
+✅ Sample Models
+
+Layer	Example Models	Purpose
+
+Staging	stg_customers, stg_orders	Source cleaning, standardization
+Intermediate	int_customer_rfm, int_sales_trends	Business logic, scoring, metrics
+Mart	customer_mart, sales_summary	Final dashboards & reporting
+
+
+
+---
+
+👤 Author
+
+Shankar Kamalakannan
+Freelance Snowflake + dbt Developer
+
+📱 Mobile: +91-95976 45086
+📧 Email: shankar.freelance.dataengineer@gmail.com
+🔗 GitHub: https://github.com/shankarkk
+
+---
