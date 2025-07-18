@@ -1,79 +1,51 @@
-# 🛒 **E-Commerce Customer Analytics** (`dbt_practice_pro`)
+# 🧪 dbt Practice Project: Advanced E-Commerce Analytics (dbt_practice_pro)
 
-A complete **end-to-end analytics project** for an e-commerce platform, designed using **Snowflake**, **dbt Cloud**, and **CI/CD**, with structured ELT layers and tested business metrics ready for dashboards and stakeholder reports.
-
----
-
-## 🔧 **Tech Stack**
-
-- **Snowflake** – Centralized data warehouse (Staging → Intermediate → Mart architecture)  
-- **dbt Cloud** – ELT modeling with documentation, incremental models, and tests  
-- **GitHub** – CI/CD versioning and deployment (future-ready)  
-- **SQL, Jinja, dbt tests, Source freshness**
+A hands-on practice project focused on mastering dbt features such as staging, incremental models, schema testing, and CI/CD pipelines — built on an e-commerce dataset to simulate real-world analytics scenarios.
 
 ---
 
-## 🧩 **Key Features**
+## 🔧 Tech Stack
 
-- 🧼 Cleanly separates raw, logic, and reporting layers  
-- 🧪 Implements **dbt tests** (`not_null`, `unique`, `relationships`) for trustable data  
-- 📦 Tracks **RFM (Recency, Frequency, Monetary) scores**, active users, and product trends  
-- 📊 Final models are **dashboard-ready** for executive reporting  
-- 🔁 Incremental models and freshness checks included
-
----
-
-## 📁 **Project Structure**
-
-```bash
-dbt_practice_pro/
-├── models/
-│   ├── staging/             # Raw source cleanup (e.g., stg_customers, stg_orders)
-│   ├── intermediate/        # Business rules, derived metrics (e.g., customer_rfm)
-│   └── marts/               # Final facts & dimensions for reporting (e.g., customer_mart)
-├── tests/                   # dbt schema + relationship tests
-├── macros/                  # Reusable Jinja functions (optional)
-├── snapshots/               # Slowly changing dimensions (if needed)
-├── dbt_project.yml          # Project config
-├── packages.yml             # dbt packages (if used)
-└── README.md                # Documentation (this file)
-
+- **Snowflake** – Cloud data warehouse (Staging → Intermediate → Mart architecture)  
+- **dbt Cloud** – ELT transformations, documentation, tests, and incremental modeling  
+- **Azure Data Factory (ADF)** – Data ingestion and orchestration (optional)  
+- **GitHub** – Version control and CI/CD deployment  
+- **SQL, Jinja, dbt tests, source freshness checks**
 
 ---
 
-📊 Business Use Cases
+## 🧩 Key Features
 
-📈 Identify and rank loyal customers using RFM scoring
-
-🛍 Track monthly order trends, product-level performance
-
-🔁 Compare active vs inactive users across time periods
-
-📦 Analyze category-wise sales, returns, and customer engagement
-
-
+- 🧍‍♂️ **RFM segmentation** to evaluate customer value and loyalty  
+- 🛍️ **Order and payment trend analysis** across time periods  
+- 📦 **Product-level sales and category insights**  
+- 📈 **Customer lifetime value** modeling  
+- ✅ **Robust dbt tests** for data quality (`not_null`, `unique`, `relationships`)  
+- 📄 **Comprehensive documentation and lineage** via dbt docs  
+- 📊 **Dashboard-ready marts** for business reporting and visualization
 
 ---
 
-✅ Sample Models
+## 📁 Project Structure (`dbt_practice_pro/`)
 
-Layer	Example Models	Purpose
-
-Staging	stg_customers, stg_orders	Source cleaning, standardization
-Intermediate	int_customer_rfm, int_sales_trends	Business logic, scoring, metrics
-Mart	customer_mart, sales_summary	Final dashboards & reporting
-
-
+dbt_practice_pro/ ├── models/ │   ├── staging/             # Raw layer (e.g., customers, orders, products) │   ├── intermediate/        # Business logic (RFM scoring, LTV calculations) │   ├── marts/               # Final models for dashboards and reports ├── snapshots/               # Optional: Slowly changing data handling ├── tests/                   # dbt schema and data tests ├── macros/                  # Reusable Jinja logic (if applicable) ├── dbt_project.yml          # Core dbt configuration ├── packages.yml             # dbt package dependencies └── README.md                # Project documentation
 
 ---
 
-👤 Author
+## 📊 Business Impact
 
-Shankar Kamalakannan
-Freelance Snowflake + dbt Developer
+- 🕒 Reduced manual reporting by automating customer segmentation and sales insights  
+- 🎯 Enabled targeted marketing via RFM and customer lifetime value models  
+- 📦 Provided detailed product and category analytics for inventory management  
+- ✅ Improved data reliability with test-driven development and CI/CD automation
 
-📱 Mobile: +91-95976 45086
-📧 Email: shankar.freelance.dataengineer@gmail.com
-🔗 GitHub: https://github.com/shankarkk
+---
+
+## 👨‍💻 Maintainer
+
+**Shankar Kamalakannan**  
+📧 shankar.freelance.dataengineer@gmail.com  
+🔗 [GitHub – shankarkk](https://github.com/shankarkk)  
+📱 +91-95976 45086
 
 ---
